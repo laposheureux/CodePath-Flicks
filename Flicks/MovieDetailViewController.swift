@@ -9,10 +9,27 @@
 import UIKit
 
 class MovieDetailViewController: UIViewController {
+    @IBOutlet var backdropImageView: UIImageView!
+    
+    var movieTitle: String?
+    var releaseDate: String?
+    var popularity: Double?
+    var overview: String?
+    var lowBackdropPath: URL?
+    var fullBackdropPath: URL?
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        if let lowBackdropPath = lowBackdropPath {
+            backdropImageView.setImageWith(URLRequest(url: lowBackdropPath), placeholderImage: nil, success: { [weak self] req, resp, image in
+                DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
+                    if let fullBackdropPath = self?.fullBackdropPath {
+                        self?.backdropImageView.setImageWith(fullBackdropPath, placeholderImage: image)
+                    }
+                }
+            }, failure: nil)
+        }
     }
     
     override func didReceiveMemoryWarning() {

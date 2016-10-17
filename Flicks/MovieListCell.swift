@@ -12,4 +12,12 @@ class MovieListCell: UITableViewCell {
     @IBOutlet var posterImageView: UIImageView!
     @IBOutlet var movieTitle: UILabel!
     @IBOutlet var movieDescription: UILabel!
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        posterImageView.image = nil
+        movieTitle.text = nil
+        movieDescription.text = nil
+    }
 }
