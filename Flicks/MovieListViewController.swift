@@ -86,8 +86,8 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
             self?.errorLabel.alpha = 1
             self?.errorLabel.isHidden = false
             
-            Timer.scheduledTimer(withTimeInterval: 2.0, repeats: false) { timer in
-                UIView.animate(withDuration: 0.35, animations: {
+            Timer.scheduledTimer(withTimeInterval: 4, repeats: false) { timer in
+                UIView.animate(withDuration: 0.5, animations: {
                     self?.errorLabel.alpha = 0
                 }) { success in
                     // Whether or not it succeeded, hide it

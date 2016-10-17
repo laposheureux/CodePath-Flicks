@@ -21,6 +21,8 @@ class MovieDetailViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        navigationItem.title = movieTitle
+        
         if let lowBackdropPath = lowBackdropPath {
             backdropImageView.setImageWith(URLRequest(url: lowBackdropPath), placeholderImage: nil, success: { [weak self] req, resp, image in
                 DispatchQueue.main.asyncAfter(deadline: .now() + 0.25) {
