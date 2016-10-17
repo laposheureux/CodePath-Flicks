@@ -80,7 +80,6 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
             self?.movieList.reloadData()
             self?.loading = false
         }) { [weak self] error in
-            // TODO REPLACE ME
             self?.loading = false
             self?.errorLabel.text = error.description
             self?.errorLabel.alpha = 1
@@ -127,9 +126,6 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListItem", for: indexPath) as! MovieListCell
-        
-        // add data
-        print(movieData[indexPath.row])
         let cellData = movieData[indexPath.row]
         
         cell.movieTitle.text = cellData["title"].string
