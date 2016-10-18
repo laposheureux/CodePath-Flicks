@@ -12,8 +12,6 @@ Time spent: 7 hours
 
 ### User Stories
 
-Completed:
-
 * [x] Required: User can view a list of movies currently playing in theaters from TMDB
 * [x] Required: Poster images are loaded asynchronously
 * [x] Required: User can view movie details by tapping on a cell in the UITableView
