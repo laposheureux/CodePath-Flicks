@@ -128,6 +128,8 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieListItem", for: indexPath) as! MovieListCell
         let cellData = movieData[indexPath.row]
         
+        cell.selectionStyle = .none
+        
         cell.movieTitle.text = cellData["title"].string
         cell.movieDescription.text = cellData["overview"].string
         
@@ -146,9 +148,12 @@ class MovieListViewController: UIViewController, UITableViewDataSource, UITableV
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        movieList.deselectRow(at: indexPath, animated: false)
-        
-    
+        let backgroundView = UIView()
+        backgroundView.backgroundColor = UIColor.orange.withAlphaComponent(0.1)
+        UIView.animate(withDuration: 0.15, animations: {
+            backgroundView.backgroundColor = UIColor.orange.withAlphaComponent(0)
+        })
+        tableView.cellForRow(at: indexPath)?.selectedBackgroundView = backgroundView
     }
     
     

@@ -93,7 +93,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" id="7i6-yn-Kv6">
-                                <frame key="frameInset" minX="16" minY="422" height="225" maxX="16"/>
+                                <frame key="frameInset" minX="16" minY="454" height="213" maxX="16"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="January 1, 2011" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K8M-5j-6q1">
@@ -103,7 +103,7 @@
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="K2O-ca-x0m">
+                                    <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Movie Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" minimumFontSize="15" adjustsLetterSpacingToFitWidth="YES" id="K2O-ca-x0m">
                                         <rect key="frame" x="8" y="16" width="327" height="22"/>
                                         <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                         <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="17"/>
@@ -133,6 +133,7 @@
                     <navigationItem key="navigationItem" id="9jN-GP-THS"/>
                     <connections>
                         <outlet property="backdropImageView" destination="vUR-kb-jZQ" id="l2H-G2-APZ"/>
+                        <outlet property="detailScrollView" destination="7i6-yn-Kv6" id="9td-Uy-cYy"/>
                         <outlet property="movieOverviewLabel" destination="1HG-rO-ww8" id="Kt2-10-w17"/>
                         <outlet property="moviePopularityLabel" destination="kFL-m4-hft" id="oTK-9u-hvk"/>
                         <outlet property="movieReleaseDateLabel" destination="K8M-5j-6q1" id="LeR-YS-mw5"/>
