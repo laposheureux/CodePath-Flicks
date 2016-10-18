@@ -18,6 +18,8 @@ Time spent: 7 hours
 * [x] Required: User sees loading state while waiting for the movies API via SVProgressHUD.
 * [x] Required: User sees an error message when there is a networking error using non 3P/UIAlertController code
 * [x] Required: User can pull to refresh the movie list
+* [x] Required: Use Cocoapods
+* [x] Required: Use AFNetworking's UIImageView category
 * [x] Optional: Customize the highlight / selection effect of the UITableView cells (a slight orange background appears and begins to fade during the push animation and selected states are canceled)
 * [x] Optional: Customize the navigation bar (the UITableView's bar shows "Now Playing" and the detail view controller's bar shows the title of the movie)
 * [x] Optional: Load the low resolution image for the large poster (I took this to mean backdrop) before switching to the high resolution image
